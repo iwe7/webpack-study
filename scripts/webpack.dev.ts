@@ -1,11 +1,13 @@
+import { resolve } from 'path';
 import { Configuration } from 'webpack';
-import { getEntry, getOutput, getModule, getPlugins, logger, getResolve } from './utils';
+
+import { getDevServer } from './devServer/index';
+import { getEntry, getModule, getOutput, getPlugins, getResolve, logger } from './utils';
+import { getOptimization } from './utils/optimization';
+
 import webpackMerge = require('webpack-merge');
 import webapck = require('webpack');
-import { resolve } from 'path';
-import { getDevServer } from './devServer/index';
 import WebpackDevServer = require('webpack-dev-server');
-import { getOptimization } from './utils/optimization';
 const defaultConfig: Configuration = {
     mode: "development",
     resolve: {
@@ -38,7 +40,7 @@ const devConfig = getDevServer();
 const dev = new WebpackDevServer(webapck(cfg), devConfig)
 dev.listen(devConfig.port, devConfig.host, (err: Error) => {
     if (err) {
-        console.error(err);
+        throw err;
     }
     console.log(`dev server start at http://localhost:${devConfig.port}`);
-})
+});

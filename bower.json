@@ -1,0 +1,17 @@
+{
+  "name": "webpack-starter",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "meepobrother <1037483576@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/iwe7/webpack-study",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
