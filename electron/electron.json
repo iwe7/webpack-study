@@ -1,0 +1,10 @@
+{
+    "target": "electron-main",
+    "name": "electron",
+    "main": [
+        "main.ts"
+    ],
+    "render": [
+        "render.ts"
+    ]
+}

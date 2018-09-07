@@ -1,7 +1,9 @@
 import { Rule } from 'webpack';
 export const fileRule: Rule = {
-    test: /\.(gif|png|jpe?g|eot|woff|ttf|svg|pdf)$/,
-    use: [
-        "file-loader"
-    ]
-};
+    test: /\.(eot|svg|cur)$/,
+    loader: 'file-loader',
+    options: {
+        name: `[name].[ext]`,
+        limit: 10000
+    }
+}

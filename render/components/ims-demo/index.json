@@ -1,0 +1,6 @@
+{
+    "name": "ims-demo",
+    "script": "index.ts",
+    "html": "index.html",
+    "css": "index.scss"
+}

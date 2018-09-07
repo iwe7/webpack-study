@@ -2,6 +2,7 @@
     "compilerOptions": {
         "outDir": "dist/tsc",
         "sourceRoot": "./",
+        "baseUrl": "./",
         "sourceMap": true,
         "target": "esnext",
         "module": "commonjs",
@@ -9,10 +10,12 @@
         "jsx": "react",
         "experimentalDecorators": true,
         "noImplicitReturns": true,
+        "declaration": true,
         "lib": [
             "es2015",
             "dom"
-        ]
+        ],
+        "paths": {}
     },
     "include": [
         "scripts",
@@ -21,12 +24,19 @@
         "widgets",
         "electron",
         "wxapp",
-        "wechat"
+        "wechat",
+        "render",
+        "angular"
     ],
     "exclude": [
         "dist",
         "node_modules",
         "tsc",
         "dev"
-    ]
+    ],
+    "angularCompilerOptions": {
+        "genDir": "./dist/gendir",
+        "skipMetadataEmit": true,
+        "enableIvy": true
+    }
 }

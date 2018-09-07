@@ -1,0 +1,21 @@
+html,
+body,
+app-test {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    background: #efefef;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+app-test {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ef5f5f;
+    color: #fff;
+    font-size: 20px;
+    overflow: auto;
+}

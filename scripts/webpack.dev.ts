@@ -1,5 +1,5 @@
 import { resolve } from 'path';
-import { Configuration } from 'webpack';
+import { Configuration, Plugin, Compiler } from 'webpack';
 
 import { getDevServer } from './devServer/index';
 import { getEntry, getModule, getOutput, getPlugins, getResolve, logger } from './utils';
@@ -26,6 +26,7 @@ const defaultConfig: Configuration = {
     },
     profile: true
 }
+import { TestPlugin } from './webpack';
 export const cfg: Configuration = webpackMerge(
     getEntry(),
     getOutput(),
@@ -33,7 +34,12 @@ export const cfg: Configuration = webpackMerge(
     getPlugins(),
     getResolve(),
     getOptimization(),
-    defaultConfig
+    defaultConfig,
+    {
+        plugins: [
+            new TestPlugin()
+        ]
+    }
 );
 
 const devConfig = getDevServer();

@@ -1,4 +1,5 @@
-import { jsonRule } from './json-rule';
+import { urlRule } from './url-rule';
+import { htmlRule } from './html-rule';
 import { fileRule } from './file-rule';
 import { scssRule } from './scss-rule';
 import { Module } from 'webpack';
@@ -10,7 +11,9 @@ export function getRules(): Module {
             cssRule,
             tsRule,
             scssRule,
-            fileRule
+            fileRule,
+            htmlRule,
+            urlRule
         ]
     }
 }
